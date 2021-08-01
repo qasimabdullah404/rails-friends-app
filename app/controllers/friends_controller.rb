@@ -4,6 +4,7 @@ class FriendsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
   # GET /friends or /friends.json
   def index
+    @time = Time.now
     @friends = Friend.all
   end
 
